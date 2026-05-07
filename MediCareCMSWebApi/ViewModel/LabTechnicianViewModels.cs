@@ -1,0 +1,126 @@
+﻿namespace MediCareCMSWebApi.ViewModel
+{
+    public class LabTechnicianViewModels
+    {
+        #region Add Lab Test ViewModel
+        public class AddLabTestViewModel
+        {
+            public string? LabName { get; set; }
+            public string? NormalRange { get; set; }
+            public decimal? Price { get; set; }
+            public bool? Availability { get; set; }
+        }
+        #endregion
+
+        public class LabTestDetailsDto
+        {
+            public int PlabTestId { get; set; }
+            public int PrescriptionId { get; set; }
+            public bool? IsCompleted { get; set; }
+            public int LabId { get; set; }
+            public string? LabName { get; set; }
+            public int LabTechnicianId { get; set; }
+            public int DoctorId { get; set; }
+            public int PatientId { get; set; }
+            public decimal? Price { get; set; }
+        }
+
+
+        #region Assign Lab Test ViewModel
+        public class AssignLabTestViewModel
+        {
+            public int PrescriptionId { get; set; }
+            public int LabId { get; set; }
+            public int? LabTechnicianId { get; set; }
+
+            public string? ResultValue { get; set; }
+            public bool? ResultStatus { get; set; }
+            public string? Remarks { get; set; }
+        }
+        #endregion
+
+       
+
+        #region Lab Bill ViewModel
+        public class LabBillViewModel
+        {
+            public string LabBillNumber { get; set; } = string.Empty;
+            public int PatientId { get; set; }
+            public int PrescriptionId { get; set; }
+            public int DoctorId { get; set; }
+            public int? LabTechnicianId { get; set; }
+            public decimal TotalAmount { get; set; }
+        }
+        #endregion
+
+        public class TestResultHistoryDto
+        {
+            public int TestResultId { get; set; }
+            public string PatientName { get; set; }
+            public string TestName { get; set; }
+            public string ResultValue { get; set; }
+            public string Remarks { get; set; }
+            public bool? ResultStatus { get; set; }
+            public DateTime? RecordDate { get; set; }
+            public string? RegisterNumber { get; set; }
+
+        }
+
+
+        #region View All Lab Tests ViewModel
+        public class ViewAllLabTestsViewModel
+        {
+            public int PlabTestId { get; set; }
+            public int PrescriptionId { get; set; }
+            public int LabId { get; set; }
+            public string? LabName { get; set; }
+            public string? NormalRange { get; set; }
+            public decimal? Price { get; set; }
+            public bool? Availability { get; set; }
+            public bool? IsCompleted { get; set; }
+        }
+        #endregion
+
+
+        public class TestResultViewModel
+        {
+            public int TestResultId { get; set; }
+            public string? ResultValue { get; set; }
+            public bool? ResultStatus { get; set; }
+            public string? Remarks { get; set; }
+            public DateTime? RecordDate { get; set; }
+            public DateTime? CreatedDate { get; set; }
+            public int? PlabTestId { get; set; }
+
+            public string? LabName { get; set; }
+        }
+
+        public class UpdateTestResultViewModel
+        {
+            public string? ResultValue { get; set; }
+            public bool? ResultStatus { get; set; }
+            public string? Remarks { get; set; }
+        }
+
+
+        public class AssignedLabTestViewModel
+        {
+           
+            public int PlabTestId { get; set; }
+            public int PrescriptionId { get; set; }
+            public int LabId { get; set; }
+            public string? ResultValue { get; set; }
+            public string? Remarks { get; set; }
+            public string? RegisterNumber { get; set; }
+            public string LabName { get; set; }
+            public decimal Price { get; set; }
+            public string NormalRange { get; set; }
+            public int DoctorId { get; set; }
+            public string DoctorName { get; set; }        
+            public int PatientId { get; set; }
+            public string PatientName { get; set; }       
+            public DateTime Date { get; set; }
+            public bool IsCompleted { get; set; }
+        }
+    }
+}
